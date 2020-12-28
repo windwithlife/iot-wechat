@@ -1,0 +1,73 @@
+.roomDetail {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .roomDetail_header {
+        height: 140rpx;
+        background: linear-gradient(135deg, #97dbad, #ffffff);
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        .roomDetail_title {
+            font-size: 44rpx;
+            color: #ffffff;
+            margin-bottom: 20rpx;
+            margin-left: 24rpx;
+        }
+    }
+    .roomDetail_container {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        .roomDetail_list {
+            width: 246rpx;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            .roomDetail_top_block {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 4rpx;
+                width: 246rpx;
+                border-right: 2rpx solid rgba(151, 219, 173, 0.8);
+                border-bottom: 2rpx solid rgba(151, 219, 173, 0.8);
+                border-bottom-right-radius: 10rpx;
+                z-index: 1;
+            }
+            .roomDetail_bottom_block {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: calc(100vh - 244rpx);
+                width: 246rpx;
+                border-right: 2rpx solid rgba(151, 219, 173, 0.8);
+                border-top: 2rpx solid rgba(151, 219, 173, 0.8);
+                border-top-right-radius: 10rpx;
+                z-index: 1;
+            }
+            .roomDetail_list_item {
+                margin-top: 4rpx;
+                width: 240rpx;
+                height: 100rpx;
+                background-color: rgba(151, 219, 173, 0.8);
+                border-top-right-radius: 10rpx;
+                border-bottom-right-radius: 10rpx;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 32rpx;
+                color: #ffffff;
+                z-index: 2;
+                &.active {
+                    width: 246rpx;
+                    background: linear-gradient(90deg, rgba(151, 219, 173, 0.8) 70%, #ffffff);
+                    border-radius: 0;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
