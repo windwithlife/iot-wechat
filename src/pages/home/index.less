@@ -1,0 +1,45 @@
+@import "../../minixs.less";
+.home_con{
+    .home_header {
+        height: 140rpx;
+        background: @primary-color;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        position: relative;
+        margin-bottom: 6rpx;
+        .home_title {
+            font-size: 44rpx;
+            color:@text-color-white;
+            margin-bottom: 20rpx;
+            margin-left: 24rpx;
+        }
+    }
+    .new_device{
+        background-color: @warning-color;
+        color: @text-color-white;
+        margin-bottom: 6rpx; 
+        padding-left: 24rpx;
+    }
+    .room_list{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-row-gap: 5rpx;
+        grid-column-gap: 5rpx;
+        .room_con{
+            padding-bottom: 100%;
+            position: relative;
+            border: 1rpx solid @border-color;
+            border-radius: 12rpx;
+            .room{
+                position: absolute;
+                text-align: center;
+                line-height: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);                               
+            }
+        }
+    }
+}
+
